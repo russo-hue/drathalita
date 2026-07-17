@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { ClipboardCheck, HeartHandshake, TrendingUp } from "lucide-react";
-import { CREFITO, PROFESSIONAL_NAME } from "@/lib/constants";
+import { CREFITO, PROFESSIONAL_NAME, publicAsset } from "@/lib/constants";
 import { Reveal } from "./Reveal";
 
 const differentials = [
@@ -14,11 +13,13 @@ export function About() {
     <section id="sobre" className="section-padding">
       <div className="container-page grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
         <Reveal>
-          <Image
-            src="/images/ilustracao-fisioterapia-thalita.png"
+          <img
+            src={publicAsset("/images/ilustracao-fisioterapia-thalita.png")}
             alt="Ilustração de atendimento fisioterapêutico humanizado"
             width={1254}
             height={1254}
+            loading="lazy"
+            decoding="async"
             className="aspect-square w-full rounded-[1.35rem] bg-[#fffaf0] object-contain p-5 shadow-soft"
           />
         </Reveal>

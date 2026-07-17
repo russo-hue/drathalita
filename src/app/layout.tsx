@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/ilustracao-fisioterapia-thalita.png",
+        url: `${SITE_URL}/images/ilustracao-fisioterapia-thalita.png`,
         width: 1254,
         height: 1254,
         alt: `Ilustração de atendimento fisioterapêutico da ${PROFESSIONAL_NAME}`,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Dra. Thalita Pereira | Fisioterapia Domiciliar em Guarulhos",
     description:
       "Atendimento fisioterapêutico domiciliar humanizado em Guarulhos e região.",
-    images: ["/images/ilustracao-fisioterapia-thalita.png"],
+    images: [`${SITE_URL}/images/ilustracao-fisioterapia-thalita.png`],
   },
 };
 

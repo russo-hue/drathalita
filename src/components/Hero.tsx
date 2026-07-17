@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { CheckCircle2, HeartHandshake, Home, MessageCircle } from "lucide-react";
-import { SERVICE_REGION, whatsappUrl } from "@/lib/constants";
+import { publicAsset, SERVICE_REGION, whatsappUrl } from "@/lib/constants";
 import { Reveal } from "./Reveal";
 
 const trustItems = [
@@ -64,12 +63,13 @@ export function Hero() {
 
           <Reveal className="lg:justify-self-end">
           <div className="image-frame">
-            <Image
-              src="/images/ilustracao-fisioterapia-thalita.png"
+            <img
+              src={publicAsset("/images/ilustracao-fisioterapia-thalita.png")}
               alt="Ilustração minimalista de uma fisioterapeuta realizando atendimento em paciente"
               width={1254}
               height={1254}
-              priority
+              loading="eager"
+              decoding="async"
               className="relative aspect-square w-full rounded-[1.1rem] bg-[#fffaf0] object-contain p-5 shadow-soft lg:max-w-[510px]"
             />
             <div className="absolute -bottom-5 left-5 right-5 rounded-lg border border-gold-500/30 bg-forest-900/95 px-5 py-4 text-center text-sm font-bold uppercase tracking-[0.18em] text-gold-300 shadow-soft">

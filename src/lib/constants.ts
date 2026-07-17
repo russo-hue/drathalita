@@ -9,9 +9,15 @@ export const WHATSAPP_MESSAGE =
   "Olá, Dra. Thalita! Conheci seu trabalho pelo site e gostaria de saber mais sobre o atendimento fisioterapêutico domiciliar.";
 
 export const INSTAGRAM_URL = "https://instagram.com/SEUUSUARIO";
+export const PUBLIC_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://dra-thalita-pereira.com.br";
 
 export const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
 )}`;
+
+export function publicAsset(path: string) {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return `${PUBLIC_BASE_PATH}${normalizedPath}`;
+}
